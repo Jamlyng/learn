@@ -4,9 +4,9 @@ void tens(int a);
 void dozens(int b,int& h);
 void hundreds(int c);
 int counter(int& a);
-void thousand(int a);
+void thousand(int a,int& val);
 void print_name(int& val, int ind,int sum);
-// P.S. Разряды не зависят от размера
+// P.S. Разряды не зависят от размера (это и так понятно, Америку не открыл я xdd)
 int main() {
 	setlocale(LC_ALL, "rus");
 	int value;
@@ -22,7 +22,7 @@ int main() {
 			print_name(value, ind, counter(value));
 			if (ind == 4) {
 				short a = (value / 1000 % 10);
-				thousand(a);
+				thousand(a,value);
 			}
 			ind--;
 		}
@@ -31,7 +31,7 @@ int main() {
 	system("PAUSE");
 	return 0;
 }
-// Исключения для названия 4 разряда числа.
+// Искючения для названия 4 разряда числа.
 void exception(int a) {
 	switch (a) {
 	case 1: {
@@ -45,18 +45,28 @@ void exception(int a) {
 	}
 }
 // Тысячи (выводит после вывода 4 разряда числа)
-void thousand(int a) {
+void thousand(int a,int& val) {
 	switch (a) {
 	case 0: {
 		std::cout << "";
 		break;
 	}
 	case 1: {
-		std::cout << "тысяча ";
+		if (val / 10000 % 10 == 1) {
+			std::cout << "тысяч ";
+		}
+		else {
+			std::cout << "тысяча ";
+		}
 		break;
 	}
 	case 2: {
-		std::cout << "тысячи ";
+		if (val / 10000 % 10 == 1) {
+			std::cout << "тысяч ";
+		}
+		else {
+			std::cout << "тысячи ";
+		}
 		break;
 	}
 	case 3: {
@@ -144,11 +154,6 @@ void print_name(int& val,int ind,int sum) {
 		// ПасхалОчка))
 		else if ((a == 0) && (sum == 1)) {
 			std::cout << " IT'S ZEEERRROOOO MAAAAAAAAAAN!!!!\n";
-			std::cout << "WW\nww\nhh\nhh";
-			for (int i = 0; i < 30; ++i) {
-				std::cout << "\nOOOOO";
-			}
-			std::cout << "\naa\naa\naa!!!!!!!";
 		}
 		else tens(a);
 	}
@@ -341,7 +346,7 @@ void hundreds(int c) {
 int counter(int& a) {
 	int counter = 1;
 	int del = 10;
-	for (int i = 1; i < 100; ++i) {//100 - лимит количества цифр
+	for (int i = 1; i < 100; ++i) {
 		if (a / del == 0) break;
 		else {
 			counter++;
