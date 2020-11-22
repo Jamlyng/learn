@@ -341,7 +341,7 @@ void hundreds(int c) {
 int counter(int& a) {
 	int counter = 1;
 	int del = 10;
-	for (int i = 1; i < 100; ++i) {
+	for (int i = 1; i < 100; ++i) {//100 - лимит количества цифр
 		if (a / del == 0) break;
 		else {
 			counter++;
