@@ -6,7 +6,7 @@ void hundreds(int c);
 int counter(int& a);
 void thousand(int a);
 void print_name(int& val, int ind,int sum);
-// P.S. Разряды не зависят от размера (это и так понятно, Америку не открыл я xdd)
+// P.S. Разряды не зависят от размера
 int main() {
 	setlocale(LC_ALL, "rus");
 	int value;
