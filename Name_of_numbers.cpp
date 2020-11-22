@@ -31,7 +31,7 @@ int main() {
 	system("PAUSE");
 	return 0;
 }
-// Искючения для названия 4 разряда числа.
+// Исключения для названия 4 разряда числа.
 void exception(int a) {
 	switch (a) {
 	case 1: {
