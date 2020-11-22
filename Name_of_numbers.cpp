@@ -6,16 +6,16 @@ void hundreds(int c);
 int counter(int& a);
 void thousand(int a);
 void print_name(int& val, int ind,int sum);
-// P.S. Разряды не зависят от размера (это и так понятно, Америку не открыл я xdd)
+// P.S. Р Р°Р·СЂСЏРґС‹ РЅРµ Р·Р°РІРёСЃСЏС‚ РѕС‚ СЂР°Р·РјРµСЂР° (СЌС‚Рѕ Рё С‚Р°Рє РїРѕРЅСЏС‚РЅРѕ, РђРјРµСЂРёРєСѓ РЅРµ РѕС‚РєСЂС‹Р» СЏ xdd)
 int main() {
 	setlocale(LC_ALL, "rus");
 	int value;
-	std::cout << "Введите число: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ";
 	std::cin >> value;
-	if (counter(value) > 7) std::cout << "\nВаше число больше допустимого (9 999 999)\n";
+	if (counter(value) > 7) std::cout << "\nР’Р°С€Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ РґРѕРїСѓСЃС‚РёРјРѕРіРѕ (9 999 999)\n";
 	else {
 		std::cout << std::endl;
-		std::cout << "Его название: ";
+		std::cout << "Р•РіРѕ РЅР°Р·РІР°РЅРёРµ: ";
 		short ind = counter(value);
 		short temp = ind;
 		for (int i = 1; i <= temp; ++i) {
@@ -31,20 +31,20 @@ int main() {
 	system("PAUSE");
 	return 0;
 }
-// Искючения для названия 4 разряда числа.
+// РСЃРєСЋС‡РµРЅРёСЏ РґР»СЏ РЅР°Р·РІР°РЅРёСЏ 4 СЂР°Р·СЂСЏРґР° С‡РёСЃР»Р°.
 void exception(int a) {
 	switch (a) {
 	case 1: {
-		std::cout << "одна ";
+		std::cout << "РѕРґРЅР° ";
 		break;
 	}
 	case 2: {
-		std::cout << "две ";
+		std::cout << "РґРІРµ ";
 		break;
 	}
 	}
 }
-// Тысячи (выводит после вывода 4 разряда числа)
+// РўС‹СЃСЏС‡Рё (РІС‹РІРѕРґРёС‚ РїРѕСЃР»Рµ РІС‹РІРѕРґР° 4 СЂР°Р·СЂСЏРґР° С‡РёСЃР»Р°)
 void thousand(int a) {
 	switch (a) {
 	case 0: {
@@ -52,28 +52,28 @@ void thousand(int a) {
 		break;
 	}
 	case 1: {
-		std::cout << "тысяча ";
+		std::cout << "С‚С‹СЃСЏС‡Р° ";
 		break;
 	}
 	case 2: {
-		std::cout << "тысячи ";
+		std::cout << "С‚С‹СЃСЏС‡Рё ";
 		break;
 	}
 	case 3: {
-		std::cout << "тысячи ";
+		std::cout << "С‚С‹СЃСЏС‡Рё ";
 		break;
 	}
 	case 4: {
-		std::cout << "тысячи ";
+		std::cout << "С‚С‹СЃСЏС‡Рё ";
 		break;
 	}
 	default: {
-		std::cout << "тысяч ";
+		std::cout << "С‚С‹СЃСЏС‡ ";
 		break;
 	}
 	}
 }
-// Выводит название ОДНОГО разряда от числа (в зависимости от его положения и возможных исключений)
+// Р’С‹РІРѕРґРёС‚ РЅР°Р·РІР°РЅРёРµ РћР”РќРћР“Рћ СЂР°Р·СЂСЏРґР° РѕС‚ С‡РёСЃР»Р° (РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ Рё РІРѕР·РјРѕР¶РЅС‹С… РёСЃРєР»СЋС‡РµРЅРёР№)
 void print_name(int& val,int ind,int sum) {
 	switch (ind) {
 	case 7: {
@@ -81,13 +81,13 @@ void print_name(int& val,int ind,int sum) {
 		a = (val / 1000000);
 		tens(a);
 		if (a == 1) {
-			std::cout << "миллион ";
+			std::cout << "РјРёР»Р»РёРѕРЅ ";
 		}
 		else if (a > 1 && a < 5) {
-			std::cout << "миллиона ";
+			std::cout << "РјРёР»Р»РёРѕРЅР° ";
 		}
 		else if (a > 4 && a < 10) {
-			std::cout << "миллионов ";
+			std::cout << "РјРёР»Р»РёРѕРЅРѕРІ ";
 		}
 		break;
 	}
@@ -141,7 +141,7 @@ void print_name(int& val,int ind,int sum) {
 			break;
 		}
 		if ((a == 0) && (sum != 1)) break;
-		// ПасхалОчка))
+		// РџР°СЃС…Р°Р»РћС‡РєР°))
 		else if ((a == 0) && (sum == 1)) {
 			std::cout << " IT'S ZEEERRROOOO MAAAAAAAAAAN!!!!\n";
 			std::cout << "WW\nww\nhh\nhh";
@@ -155,97 +155,97 @@ void print_name(int& val,int ind,int sum) {
 	}
 	
 }
-// Числа-исключения (10-19)
+// Р§РёСЃР»Р°-РёСЃРєР»СЋС‡РµРЅРёСЏ (10-19)
 void tens_10_19(int dh) {
 	switch (dh) {
 	case 0: {
-		std::cout << "десять ";
+		std::cout << "РґРµСЃСЏС‚СЊ ";
 		break;
 	}
 	case 1: {
-		std::cout << "одиннадцать ";
+		std::cout << "РѕРґРёРЅРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 2: {
-		std::cout << "двенадцать ";
+		std::cout << "РґРІРµРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 3: {
-		std::cout << "тринадцать ";
+		std::cout << "С‚СЂРёРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 4: {
-		std::cout << "четырнадцать ";
+		std::cout << "С‡РµС‚С‹СЂРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 5: {
-		std::cout << "пятнадцать ";
+		std::cout << "РїСЏС‚РЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 6: {
-		std::cout << "шестнадцать ";
+		std::cout << "С€РµСЃС‚РЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 7: {
-		std::cout << "семнадцать ";
+		std::cout << "СЃРµРјРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 8: {
-		std::cout << "восемнадцать ";
+		std::cout << "РІРѕСЃРµРјРЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 9: {
-		std::cout << "девятнадцать ";
+		std::cout << "РґРµРІСЏС‚РЅР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	}
 }
-// Цифры (0-9)
+// Р¦РёС„СЂС‹ (0-9)
 void tens(int a) {
 	switch (a) {
 	case 0: {
-		std::cout << "ноль ";
+		std::cout << "РЅРѕР»СЊ ";
 		break;
 	}
 	case 1: {
-		std::cout << "один "; // В 4 разряде не учитывается
+		std::cout << "РѕРґРёРЅ "; // Р’ 4 СЂР°Р·СЂСЏРґРµ РЅРµ СѓС‡РёС‚С‹РІР°РµС‚СЃСЏ
 		break;
 	}
 	case 2: {
-		std::cout << "два "; // В 4 разряде не учитывается
+		std::cout << "РґРІР° "; // Р’ 4 СЂР°Р·СЂСЏРґРµ РЅРµ СѓС‡РёС‚С‹РІР°РµС‚СЃСЏ
 		break;
 	}
 	case 3: {
-		std::cout << "три ";
+		std::cout << "С‚СЂРё ";
 		break;
 	}
 	case 4: {
-		std::cout << "четыре ";
+		std::cout << "С‡РµС‚С‹СЂРµ ";
 		break;
 	}
 	case 5: {
-		std::cout << "пять ";
+		std::cout << "РїСЏС‚СЊ ";
 		break;
 	}
 	case 6:{
-		std::cout << "шесть ";
+		std::cout << "С€РµСЃС‚СЊ ";
 		break;
 	}
 	case 7:{
-		std::cout << "семь ";
+		std::cout << "СЃРµРјСЊ ";
 		break;
 	}
 	case 8:{
-		std::cout << "восемь ";
+		std::cout << "РІРѕСЃРµРјСЊ ";
 		break;
 	}
 	case 9: {
-		std::cout << "девять ";
+		std::cout << "РґРµРІСЏС‚СЊ ";
 		break;
 	}
 	}
 }
-// Десятки
+// Р”РµСЃСЏС‚РєРё
 void dozens(int b,int &h) {
 	switch (b) {
 	case 0: {
@@ -259,40 +259,40 @@ void dozens(int b,int &h) {
 		break;
 	}
 	case 2: {
-		std::cout << "двадцать ";
+		std::cout << "РґРІР°РґС†Р°С‚СЊ ";
 		break;
 	}
 	case 3: {
-		std::cout << "тридцать ";
+		std::cout << "С‚СЂРёРґС†Р°С‚СЊ ";
 		break;
 	}
 	case 4: {
-		std::cout << "сорок ";
+		std::cout << "СЃРѕСЂРѕРє ";
 		break;
 	}
 	case 5: {
-		std::cout << "пятьдесят ";
+		std::cout << "РїСЏС‚СЊРґРµСЃСЏС‚ ";
 		break;
 	}
 	case 6: {
-		std::cout << "шестьдесят ";
+		std::cout << "С€РµСЃС‚СЊРґРµСЃСЏС‚ ";
 		break;
 	}
 	case 7: {
-		std::cout << "семьдесят ";
+		std::cout << "СЃРµРјСЊРґРµСЃСЏС‚ ";
 		break;
 	}
 	case 8: {
-		std::cout << "восемьдесят ";
+		std::cout << "РІРѕСЃРµРјСЊРґРµСЃСЏС‚ ";
 		break;
 	}
 	case 9: {
-		std::cout << "девяносто ";
+		std::cout << "РґРµРІСЏРЅРѕСЃС‚Рѕ ";
 		break;
 	}
 	}
 }
-// Сотни
+// РЎРѕС‚РЅРё
 void hundreds(int c) {
 	switch (c) {
 	case 0: {
@@ -300,44 +300,44 @@ void hundreds(int c) {
 		break;
 	}
 	case 1: {
-		std::cout << "сто ";
+		std::cout << "СЃС‚Рѕ ";
 		break;
 	}
 	case 2: {
-		std::cout << "двести ";
+		std::cout << "РґРІРµСЃС‚Рё ";
 		break;
 	}
 	case 3: {
-		std::cout << "триста ";
+		std::cout << "С‚СЂРёСЃС‚Р° ";
 		break;
 	}
 	case 4: {
-		std::cout << "четыреста ";
+		std::cout << "С‡РµС‚С‹СЂРµСЃС‚Р° ";
 		break;
 	}
 	case 5: {
-		std::cout << "пятьсот ";
+		std::cout << "РїСЏС‚СЊСЃРѕС‚ ";
 		break;
 	}
 	case 6: {
-		std::cout << "шестьсот ";
+		std::cout << "С€РµСЃС‚СЊСЃРѕС‚ ";
 		break;
 	}
 	case 7: {
-		std::cout << "семьсот ";
+		std::cout << "СЃРµРјСЊСЃРѕС‚ ";
 		break;
 	}
 	case 8: {
-		std::cout << "восемьсот ";
+		std::cout << "РІРѕСЃРµРјСЊСЃРѕС‚ ";
 		break;
 	}
 	case 9: {
-		std::cout << "девятьсот ";
+		std::cout << "РґРµРІСЏС‚СЊСЃРѕС‚ ";
 		break;
 	}
 	}
 }
-// Считает количество символов.
+// РЎС‡РёС‚Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ.
 int counter(int& a) {
 	int counter = 1;
 	int del = 10;
