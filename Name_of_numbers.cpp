@@ -1,35 +1,32 @@
+#pragma once
 #include <iostream>
+#include <Windows.h>
 void tens_10_19(int dh);
 void tens(int a);
-void dozens(int b,int& h);
+void dozens(int b, int& h);
 void hundreds(int c);
 int counter(int& a);
-void thousand(int a,int& val);
-void print_name(int& val, int ind,int sum);
+void thousand(int a, int& val);
+void print_name(int& val, int ind, int sum);
+void print_full_name(int& value);
 // P.S. Разряды не зависят от размера 
-int main() {
-	setlocale(LC_ALL, "rus");
-	int value;
-	std::cout << "Введите число: ";
-	std::cin >> value;
+void print_full_name(int& value) {
 	if (counter(value) > 7) std::cout << "\nВаше число больше допустимого (9 999 999)\n";
 	else {
 		std::cout << std::endl;
-		std::cout << "Его название: ";
+		std::cout << "Название этого числа: ";
 		short ind = counter(value);
 		short temp = ind;
 		for (int i = 1; i <= temp; ++i) {
 			print_name(value, ind, counter(value));
 			if (ind == 4) {
 				short a = (value / 1000 % 10);
-				thousand(a,value);
+				thousand(a, value);
 			}
 			ind--;
 		}
 	}
 	std::cout << '\n';
-	system("PAUSE");
-	return 0;
 }
 // Искючения для названия 4 разряда числа.
 void exception(int a) {
@@ -45,10 +42,15 @@ void exception(int a) {
 	}
 }
 // Тысячи (выводит после вывода 4 разряда числа)
-void thousand(int a,int& val) {
+void thousand(int a, int& val) {
 	switch (a) {
 	case 0: {
-		std::cout << "";
+		if ((counter(val) < 4)||((counter(val)==7)&&((val / 1000 % 10 == 0)&&(val / 10000 % 10 == 0)&&(val / 100000 % 10 == 0)))) {
+			std::cout << "";
+		}
+		else {
+			std::cout << "тысяч ";
+		}
 		break;
 	}
 	case 1: {
@@ -84,7 +86,7 @@ void thousand(int a,int& val) {
 	}
 }
 // Выводит название ОДНОГО разряда от числа (в зависимости от его положения и возможных исключений)
-void print_name(int& val,int ind,int sum) {
+void print_name(int& val, int ind, int sum) {
 	switch (ind) {
 	case 7: {
 		short a;
@@ -138,10 +140,10 @@ void print_name(int& val,int ind,int sum) {
 		short b;
 		b = ((val / 10) % 10);
 		if (b == 1) {
-			short h = (val%10);
+			short h = (val % 10);
 			tens_10_19(h);
 		}
-		else dozens(b,val);
+		else dozens(b, val);
 		break;
 	}
 	case 1: {
@@ -158,7 +160,7 @@ void print_name(int& val,int ind,int sum) {
 		else tens(a);
 	}
 	}
-	
+
 }
 // Числа-исключения (10-19)
 void tens_10_19(int dh) {
@@ -232,15 +234,15 @@ void tens(int a) {
 		std::cout << "пять ";
 		break;
 	}
-	case 6:{
+	case 6: {
 		std::cout << "шесть ";
 		break;
 	}
-	case 7:{
+	case 7: {
 		std::cout << "семь ";
 		break;
 	}
-	case 8:{
+	case 8: {
 		std::cout << "восемь ";
 		break;
 	}
@@ -251,7 +253,7 @@ void tens(int a) {
 	}
 }
 // Десятки
-void dozens(int b,int &h) {
+void dozens(int b, int& h) {
 	switch (b) {
 	case 0: {
 		std::cout << "";
