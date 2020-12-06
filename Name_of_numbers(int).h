@@ -9,12 +9,12 @@ int counter(int& a);
 void thousand(int a, int& val);
 void print_name(int& val, int ind, int sum);
 void print_full_name(int& value);
-// P.S. Ğàçğÿäû íå çàâèñÿò îò ğàçìåğà 
+// P.S. Ğ Ğ°Ğ·Ñ€ÑĞ´Ñ‹ Ğ½Ğµ Ğ·Ğ°Ğ²Ğ¸ÑÑÑ‚ Ğ¾Ñ‚ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ° 
 void print_full_name(int& value) {
-	if (counter(value) > 7) std::cout << "\nÂàøå ÷èñëî áîëüøå äîïóñòèìîãî (9 999 999)\n";
+	if (counter(value) > 7) std::cout << "\nĞ’Ğ°ÑˆĞµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ğ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ğ¾Ğ³Ğ¾ (9 999 999)\n";
 	else {
 		std::cout << std::endl;
-		std::cout << "Íàçâàíèå ıòîãî ÷èñëà: ";
+		std::cout << "ĞĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ÑÑ‚Ğ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ°: ";
 		short ind = counter(value);
 		short temp = ind;
 		for (int i = 1; i <= temp; ++i) {
@@ -28,20 +28,20 @@ void print_full_name(int& value) {
 	}
 	std::cout << '\n';
 }
-// Èñêş÷åíèÿ äëÿ íàçâàíèÿ 4 ğàçğÿäà ÷èñëà.
+// Ğ˜ÑĞºÑÑ‡ĞµĞ½Ğ¸Ñ Ğ´Ğ»Ñ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ñ 4 Ñ€Ğ°Ğ·Ñ€ÑĞ´Ğ° Ñ‡Ğ¸ÑĞ»Ğ°.
 void exception(int a) {
 	switch (a) {
 	case 1: {
-		std::cout << "îäíà ";
+		std::cout << "Ğ¾Ğ´Ğ½Ğ° ";
 		break;
 	}
 	case 2: {
-		std::cout << "äâå ";
+		std::cout << "Ğ´Ğ²Ğµ ";
 		break;
 	}
 	}
 }
-// Òûñÿ÷è (âûâîäèò ïîñëå âûâîäà 4 ğàçğÿäà ÷èñëà)
+// Ğ¢Ñ‹ÑÑÑ‡Ğ¸ (Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ñ‚ Ğ¿Ğ¾ÑĞ»Ğµ Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ° 4 Ñ€Ğ°Ğ·Ñ€ÑĞ´Ğ° Ñ‡Ğ¸ÑĞ»Ğ°)
 void thousand(int a, int& val) {
 	switch (a) {
 	case 0: {
@@ -49,43 +49,43 @@ void thousand(int a, int& val) {
 			std::cout << "";
 		}
 		else {
-			std::cout << "òûñÿ÷ ";
+			std::cout << "Ñ‚Ñ‹ÑÑÑ‡ ";
 		}
 		break;
 	}
 	case 1: {
 		if (val / 10000 % 10 == 1) {
-			std::cout << "òûñÿ÷ ";
+			std::cout << "Ñ‚Ñ‹ÑÑÑ‡ ";
 		}
 		else {
-			std::cout << "òûñÿ÷à ";
+			std::cout << "Ñ‚Ñ‹ÑÑÑ‡Ğ° ";
 		}
 		break;
 	}
 	case 2: {
 		if (val / 10000 % 10 == 1) {
-			std::cout << "òûñÿ÷ ";
+			std::cout << "Ñ‚Ñ‹ÑÑÑ‡ ";
 		}
 		else {
-			std::cout << "òûñÿ÷è ";
+			std::cout << "Ñ‚Ñ‹ÑÑÑ‡Ğ¸ ";
 		}
 		break;
 	}
 	case 3: {
-		std::cout << "òûñÿ÷è ";
+		std::cout << "Ñ‚Ñ‹ÑÑÑ‡Ğ¸ ";
 		break;
 	}
 	case 4: {
-		std::cout << "òûñÿ÷è ";
+		std::cout << "Ñ‚Ñ‹ÑÑÑ‡Ğ¸ ";
 		break;
 	}
 	default: {
-		std::cout << "òûñÿ÷ ";
+		std::cout << "Ñ‚Ñ‹ÑÑÑ‡ ";
 		break;
 	}
 	}
 }
-// Âûâîäèò íàçâàíèå ÎÄÍÎÃÎ ğàçğÿäà îò ÷èñëà (â çàâèñèìîñòè îò åãî ïîëîæåíèÿ è âîçìîæíûõ èñêëş÷åíèé)
+// Ğ’Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ñ‚ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ĞĞ”ĞĞĞ“Ğ Ñ€Ğ°Ğ·Ñ€ÑĞ´Ğ° Ğ¾Ñ‚ Ñ‡Ğ¸ÑĞ»Ğ° (Ğ² Ğ·Ğ°Ğ²Ğ¸ÑĞ¸Ğ¼Ğ¾ÑÑ‚Ğ¸ Ğ¾Ñ‚ ĞµĞ³Ğ¾ Ğ¿Ğ¾Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ñ Ğ¸ Ğ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ñ‹Ñ… Ğ¸ÑĞºĞ»ÑÑ‡ĞµĞ½Ğ¸Ğ¹)
 void print_name(int& val, int ind, int sum) {
 	switch (ind) {
 	case 7: {
@@ -93,13 +93,13 @@ void print_name(int& val, int ind, int sum) {
 		a = (val / 1000000);
 		tens(a);
 		if (a == 1) {
-			std::cout << "ìèëëèîí ";
+			std::cout << "Ğ¼Ğ¸Ğ»Ğ»Ğ¸Ğ¾Ğ½ ";
 		}
 		else if (a > 1 && a < 5) {
-			std::cout << "ìèëëèîíà ";
+			std::cout << "Ğ¼Ğ¸Ğ»Ğ»Ğ¸Ğ¾Ğ½Ğ° ";
 		}
 		else if (a > 4 && a < 10) {
-			std::cout << "ìèëëèîíîâ ";
+			std::cout << "Ğ¼Ğ¸Ğ»Ğ»Ğ¸Ğ¾Ğ½Ğ¾Ğ² ";
 		}
 		break;
 	}
@@ -153,7 +153,7 @@ void print_name(int& val, int ind, int sum) {
 			break;
 		}
 		if ((a == 0) && (sum != 1)) break;
-		// ÏàñõàëÎ÷êà))
+		// ĞŸĞ°ÑÑ…Ğ°Ğ»ĞÑ‡ĞºĞ°))
 		else if ((a == 0) && (sum == 1)) {
 			std::cout << " IT'S ZEEERRROOOO MAAAAAAAAAAN!!!!\n";
 		}
@@ -162,97 +162,97 @@ void print_name(int& val, int ind, int sum) {
 	}
 
 }
-// ×èñëà-èñêëş÷åíèÿ (10-19)
+// Ğ§Ğ¸ÑĞ»Ğ°-Ğ¸ÑĞºĞ»ÑÑ‡ĞµĞ½Ğ¸Ñ (10-19)
 void tens_10_19(int dh) {
 	switch (dh) {
 	case 0: {
-		std::cout << "äåñÿòü ";
+		std::cout << "Ğ´ĞµÑÑÑ‚ÑŒ ";
 		break;
 	}
 	case 1: {
-		std::cout << "îäèííàäöàòü ";
+		std::cout << "Ğ¾Ğ´Ğ¸Ğ½Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 2: {
-		std::cout << "äâåíàäöàòü ";
+		std::cout << "Ğ´Ğ²ĞµĞ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 3: {
-		std::cout << "òğèíàäöàòü ";
+		std::cout << "Ñ‚Ñ€Ğ¸Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 4: {
-		std::cout << "÷åòûğíàäöàòü ";
+		std::cout << "Ñ‡ĞµÑ‚Ñ‹Ñ€Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 5: {
-		std::cout << "ïÿòíàäöàòü ";
+		std::cout << "Ğ¿ÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 6: {
-		std::cout << "øåñòíàäöàòü ";
+		std::cout << "ÑˆĞµÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 7: {
-		std::cout << "ñåìíàäöàòü ";
+		std::cout << "ÑĞµĞ¼Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 8: {
-		std::cout << "âîñåìíàäöàòü ";
+		std::cout << "Ğ²Ğ¾ÑĞµĞ¼Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 9: {
-		std::cout << "äåâÿòíàäöàòü ";
+		std::cout << "Ğ´ĞµĞ²ÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	}
 }
-// Öèôğû (0-9)
+// Ğ¦Ğ¸Ñ„Ñ€Ñ‹ (0-9)
 void tens(int a) {
 	switch (a) {
 	case 0: {
-		std::cout << "íîëü ";
+		std::cout << "Ğ½Ğ¾Ğ»ÑŒ ";
 		break;
 	}
 	case 1: {
-		std::cout << "îäèí "; // Â 4 ğàçğÿäå íå ó÷èòûâàåòñÿ
+		std::cout << "Ğ¾Ğ´Ğ¸Ğ½ "; // Ğ’ 4 Ñ€Ğ°Ğ·Ñ€ÑĞ´Ğµ Ğ½Ğµ ÑƒÑ‡Ğ¸Ñ‚Ñ‹Ğ²Ğ°ĞµÑ‚ÑÑ
 		break;
 	}
 	case 2: {
-		std::cout << "äâà "; // Â 4 ğàçğÿäå íå ó÷èòûâàåòñÿ
+		std::cout << "Ğ´Ğ²Ğ° "; // Ğ’ 4 Ñ€Ğ°Ğ·Ñ€ÑĞ´Ğµ Ğ½Ğµ ÑƒÑ‡Ğ¸Ñ‚Ñ‹Ğ²Ğ°ĞµÑ‚ÑÑ
 		break;
 	}
 	case 3: {
-		std::cout << "òğè ";
+		std::cout << "Ñ‚Ñ€Ğ¸ ";
 		break;
 	}
 	case 4: {
-		std::cout << "÷åòûğå ";
+		std::cout << "Ñ‡ĞµÑ‚Ñ‹Ñ€Ğµ ";
 		break;
 	}
 	case 5: {
-		std::cout << "ïÿòü ";
+		std::cout << "Ğ¿ÑÑ‚ÑŒ ";
 		break;
 	}
 	case 6: {
-		std::cout << "øåñòü ";
+		std::cout << "ÑˆĞµÑÑ‚ÑŒ ";
 		break;
 	}
 	case 7: {
-		std::cout << "ñåìü ";
+		std::cout << "ÑĞµĞ¼ÑŒ ";
 		break;
 	}
 	case 8: {
-		std::cout << "âîñåìü ";
+		std::cout << "Ğ²Ğ¾ÑĞµĞ¼ÑŒ ";
 		break;
 	}
 	case 9: {
-		std::cout << "äåâÿòü ";
+		std::cout << "Ğ´ĞµĞ²ÑÑ‚ÑŒ ";
 		break;
 	}
 	}
 }
-// Äåñÿòêè
+// Ğ”ĞµÑÑÑ‚ĞºĞ¸
 void dozens(int b, int& h) {
 	switch (b) {
 	case 0: {
@@ -266,40 +266,40 @@ void dozens(int b, int& h) {
 		break;
 	}
 	case 2: {
-		std::cout << "äâàäöàòü ";
+		std::cout << "Ğ´Ğ²Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 3: {
-		std::cout << "òğèäöàòü ";
+		std::cout << "Ñ‚Ñ€Ğ¸Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 		break;
 	}
 	case 4: {
-		std::cout << "ñîğîê ";
+		std::cout << "ÑĞ¾Ñ€Ğ¾Ğº ";
 		break;
 	}
 	case 5: {
-		std::cout << "ïÿòüäåñÿò ";
+		std::cout << "Ğ¿ÑÑ‚ÑŒĞ´ĞµÑÑÑ‚ ";
 		break;
 	}
 	case 6: {
-		std::cout << "øåñòüäåñÿò ";
+		std::cout << "ÑˆĞµÑÑ‚ÑŒĞ´ĞµÑÑÑ‚ ";
 		break;
 	}
 	case 7: {
-		std::cout << "ñåìüäåñÿò ";
+		std::cout << "ÑĞµĞ¼ÑŒĞ´ĞµÑÑÑ‚ ";
 		break;
 	}
 	case 8: {
-		std::cout << "âîñåìüäåñÿò ";
+		std::cout << "Ğ²Ğ¾ÑĞµĞ¼ÑŒĞ´ĞµÑÑÑ‚ ";
 		break;
 	}
 	case 9: {
-		std::cout << "äåâÿíîñòî ";
+		std::cout << "Ğ´ĞµĞ²ÑĞ½Ğ¾ÑÑ‚Ğ¾ ";
 		break;
 	}
 	}
 }
-// Ñîòíè
+// Ğ¡Ğ¾Ñ‚Ğ½Ğ¸
 void hundreds(int c) {
 	switch (c) {
 	case 0: {
@@ -307,44 +307,44 @@ void hundreds(int c) {
 		break;
 	}
 	case 1: {
-		std::cout << "ñòî ";
+		std::cout << "ÑÑ‚Ğ¾ ";
 		break;
 	}
 	case 2: {
-		std::cout << "äâåñòè ";
+		std::cout << "Ğ´Ğ²ĞµÑÑ‚Ğ¸ ";
 		break;
 	}
 	case 3: {
-		std::cout << "òğèñòà ";
+		std::cout << "Ñ‚Ñ€Ğ¸ÑÑ‚Ğ° ";
 		break;
 	}
 	case 4: {
-		std::cout << "÷åòûğåñòà ";
+		std::cout << "Ñ‡ĞµÑ‚Ñ‹Ñ€ĞµÑÑ‚Ğ° ";
 		break;
 	}
 	case 5: {
-		std::cout << "ïÿòüñîò ";
+		std::cout << "Ğ¿ÑÑ‚ÑŒÑĞ¾Ñ‚ ";
 		break;
 	}
 	case 6: {
-		std::cout << "øåñòüñîò ";
+		std::cout << "ÑˆĞµÑÑ‚ÑŒÑĞ¾Ñ‚ ";
 		break;
 	}
 	case 7: {
-		std::cout << "ñåìüñîò ";
+		std::cout << "ÑĞµĞ¼ÑŒÑĞ¾Ñ‚ ";
 		break;
 	}
 	case 8: {
-		std::cout << "âîñåìüñîò ";
+		std::cout << "Ğ²Ğ¾ÑĞµĞ¼ÑŒÑĞ¾Ñ‚ ";
 		break;
 	}
 	case 9: {
-		std::cout << "äåâÿòüñîò ";
+		std::cout << "Ğ´ĞµĞ²ÑÑ‚ÑŒÑĞ¾Ñ‚ ";
 		break;
 	}
 	}
 }
-// Ñ÷èòàåò êîëè÷åñòâî ñèìâîëîâ.
+// Ğ¡Ñ‡Ğ¸Ñ‚Ğ°ĞµÑ‚ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ².
 int counter(int& a) {
 	int counter = 1;
 	int del = 10;
