@@ -3,7 +3,7 @@ int main() {
 	setlocale(LC_ALL, "rus");
 	int value = 1;
 	while (value != 0) {
-		std::cout << "Ââåäèòå ÷èñëî(äëÿ âûõîäà 0): ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾(Ð´Ð»Ñ Ð²Ñ‹Ñ…Ð¾Ð´Ð° 0): ";
 		std::cin >> value;
 		print_full_name(value);
 		std::cout << std::endl;
