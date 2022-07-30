@@ -55,7 +55,7 @@ void String::Reverse() {
 }
 void String::Replace(const char* from, const char* to, unsigned quantity) {
 	if (!from)
-		return;// обработка отсутствия изменений
+		return;// РѕР±СЂР°Р±РѕС‚РєР° РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РёР·РјРµРЅРµРЅРёР№
 	size_t size_from = 0;
 	size_t size_to = 0;
 	size_t size_indices = 100;
@@ -66,7 +66,7 @@ void String::Replace(const char* from, const char* to, unsigned quantity) {
 	for (; to[size_to]; ++size_to);
 	int change_size = static_cast<size_t>(size_to - size_from);
 	for (size_t i = 0, q = 0; ((i < size) && (!quantity || (q < quantity))); ++i) {
-		if (str[i] == from[0]) { //Начало проверки вхождения
+		if (str[i] == from[0]) { //РќР°С‡Р°Р»Рѕ РїСЂРѕРІРµСЂРєРё РІС…РѕР¶РґРµРЅРёСЏ
 			size_t i_temp = i;
 			bool crossing = true;
 			for (size_t j = 0; ((j < size_from)&&(i_temp<size)); ++j,++i_temp) {
@@ -75,10 +75,10 @@ void String::Replace(const char* from, const char* to, unsigned quantity) {
 					break;
 				}
 			}
-			if (crossing) { // Полное вхождение подстроки
+			if (crossing) { // РџРѕР»РЅРѕРµ РІС…РѕР¶РґРµРЅРёРµ РїРѕРґСЃС‚СЂРѕРєРё
 				indices[quantity_from] = i;
 				++quantity_from;
-				if (size_indices == quantity_from) {//Если под индексы не хватает места
+				if (size_indices == quantity_from) {//Р•СЃР»Рё РїРѕРґ РёРЅРґРµРєСЃС‹ РЅРµ С…РІР°С‚Р°РµС‚ РјРµСЃС‚Р°
 					size_t* temp = new size_t[size_indices + 100];
 					for (size_t t = 0; t < size_indices; ++t)
 						temp[t] = indices[t];
